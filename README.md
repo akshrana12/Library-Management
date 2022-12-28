@@ -34,7 +34,7 @@ Below are the few endpoints:
 1. POST - /api/books/addBook
 
 It adds the new book to the Books table.
-### JSON it accepts
+##### JSON it accepts
 {
   BookId INTEGER,
   BookName STRING,
@@ -42,7 +42,7 @@ It adds the new book to the Books table.
   BookGenre STRING
 }
 
-### On Success It returns
+##### On Success It returns
 status 200 
 {
   BookId INTEGER,
@@ -53,17 +53,17 @@ status 200
 
 2. GET - /api/books/getAllBooks
 
-### On Success It returns
+##### On Success It returns
 status 200  with list of all the books that are available.
 
 3. GET - /api/books/getBook/:id
 
-### On Success It returns
+##### On Success It returns
 status 200  with book with given id.
 
 4. GET - /getBook/genre/:genre
 
-### On Success It returns
+##### On Success It returns
 status 200  with all books of given genre.
 
 
@@ -71,15 +71,15 @@ status 200  with all books of given genre.
 
 1. POST - /api/user/addUser
 
-It adds the new book to the Books table.
-### JSON it accepts
+It adds the new user to the Users table.
+##### JSON it accepts
 {
   StudentId INTEGER,
   StudentName STRING,
   EmailId STRING
 }
 
-### On Success It returns
+##### On Success It returns
 status 200 
 {
   StudentId INTEGER,
@@ -89,12 +89,33 @@ status 200
 
 2. GET - /api/user/getAllUsers
 
-### On Success It returns
+##### On Success It returns
 status 200  with list of all the users that are available.
 
 3. GET - /api/user/getUser/:id
 
-### On Success It returns
+##### On Success It returns
 status 200  with user with given id.
 
+
+## BookIssue Related API'S
+
+1. POST - /api/action/issueBook?userId={valid user Id}&bookId={valid book Id}
+
+##### On Success It returns
+status 200 
+{
+  UserId INTEGER,
+  BookId INTEGER,
+}
+
+2. DELETE - /api/action/returnBook?userId={valid user Id}&bookId={valid book Id}
+
+##### On Success It returns
+status 200
+
+3. GET - /api/action/getUserDetail?userId={valid user Id}
+
+##### On Success It returns
+status 200  with all the books issued by this user
 
