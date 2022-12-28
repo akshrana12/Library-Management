@@ -22,7 +22,7 @@ func guidMiddleware() gin.HandlerFunc {
 				c.Request.Body = ioutil.NopCloser(bytes.NewReader(b))
 				c.Next()
 			} else {
-				c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": "Wrong email Handle"})
+				c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": "Wrong email Handle use @geu.ac.in or @gmail.com"})
 				return
 			}
 		} else {

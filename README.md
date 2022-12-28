@@ -11,6 +11,7 @@ Schema of users = {
   StudentName,
   EmailId
 }
+** Email id can only have @geu.ac.in or gmail.com in the end.
 
 2. Books - It stores the information about the books.
 Schema of books = {
